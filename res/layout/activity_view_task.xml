@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.ViewTaskActivity">
+
+    <TextView
+        android:id="@+id/view_name_task_tv"
+        android:layout_width="372dp"
+        android:layout_height="58dp"
+        android:hint="@string/view_name_task_tv"
+        android:textColorHint="#8D6E63"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/deadline_lbl_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.41"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_name_lbl_tv" />
+
+    <TextView
+        android:id="@+id/view_deadline_tv"
+        android:layout_width="373dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="16dp"
+        android:hint="@string/view_deadline_tv"
+        android:textColorHint="#8D6E63"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/edit_completed_lbl_tv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/deadline_lbl_tv" />
+
+    <TextView
+        android:id="@+id/view_description_tv"
+        android:layout_width="373dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="90dp"
+        android:hint="@string/view_description_tv"
+        android:textColorHint="#8D6E63"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_description_lbl_tv" />
+
+    <ImageButton
+        android:id="@+id/view_back_btn_id"
+        android:layout_width="48dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="#00FFFFFF"
+        android:contentDescription="@string/back_btn_text"
+        android:minHeight="48dp"
+        android:onClick="onBackBtnPressed"
+        app:layout_constraintBottom_toTopOf="@+id/edit_edit_task_tv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_arrow_back_24"
+        app:tint="?android:attr/textColorPrimary"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/view_label_tv"
+        android:layout_width="373dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:hint="@string/add_edit_label_sp_text"
+        android:textColorHint="#8D6E63"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/edit_description_lbl_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_label_lbl_tv" />
+
+    <TextView
+        android:id="@+id/view_completed_tv"
+        android:layout_width="373dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="16dp"
+        android:hint="@string/view_completed_tv"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/edit_label_lbl_tv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_completed_lbl_tv" />
+
+    <Button
+        android:id="@+id/view_edit_btn_id"
+        android:layout_width="217dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="onEditBtnPressed"
+        android:text="@string/view_edit_btn_id"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/edit_name_lbl_tv"
+        android:layout_width="117dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="16dp"
+        android:text="@string/edit_name_lbl_tv"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/view_name_task_tv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_edit_task_tv" />
+
+    <TextView
+        android:id="@+id/edit_description_lbl_tv"
+        android:layout_width="117dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="16dp"
+        android:text="@string/edit_description_lbl_tv"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/view_description_tv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_label_tv" />
+
+    <TextView
+        android:id="@+id/edit_label_lbl_tv"
+        android:layout_width="117dp"
+        android:layout_height="26dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/edit_label_lbl_tv"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/view_label_tv"
+        app:layout_constraintStart_toStartOf="@+id/view_completed_tv"
+        app:layout_constraintTop_toBottomOf="@+id/view_completed_tv" />
+
+    <TextView
+        android:id="@+id/edit_completed_lbl_tv"
+        android:layout_width="111dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="16dp"
+        android:text="@string/edit_completed_lbl_tv"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/view_completed_tv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_deadline_tv" />
+
+    <TextView
+        android:id="@+id/deadline_lbl_tv"
+        android:layout_width="120dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="16dp"
+        android:text="@string/edit_deadline_lbl_tv"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/view_deadline_tv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_name_task_tv" />
+
+    <TextView
+        android:id="@+id/edit_edit_task_tv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="47dp"
+        android:gravity="center"
+        android:text="@string/view_view_task_tv"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/edit_name_lbl_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_back_btn_id" />
+</androidx.constraintlayout.widget.ConstraintLayout>

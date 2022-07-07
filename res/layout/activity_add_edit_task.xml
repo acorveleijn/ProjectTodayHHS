@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="#00FFFFFF">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/add_edit_title_pt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/add_edit_title_pt"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+        <com.google.android.material.textfield.TextInputLayout
+
+            android:id="@+id/add_edit_name_til"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/add_edit_name_ti_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:gravity="start|left"
+                android:hint="@string/edit_name_ti_text"
+                android:textColorHint="#546E7A" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/deadline_til"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/add_edit_deadline_dt"
+                    android:layout_width="317dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:gravity="start|left"
+                    android:hint="@string/add_edit_deadline_dt"
+                    android:inputType="datetime"
+                    android:nextFocusDown="@id/login_btn"
+                    android:nextFocusForward="@id/login_btn"
+                    android:textColorHint="#546E7A"
+                    android:textSize="14dp"
+                    app:endIconMode="clear_text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageButton
+                android:id="@+id/add_edit_calendar_btn_id"
+                android:layout_width="66dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#00673AB7"
+                android:minWidth="48dp"
+                android:minHeight="48dp"
+                android:onClick="onCalendarBtnPressed"
+                android:src="@android:drawable/ic_menu_my_calendar"
+                app:tint="?android:attr/textColorPrimary" />
+
+        </LinearLayout>
+
+        <Spinner
+            android:id="@+id/add_edit_label_sp_text"
+            android:layout_width="397dp"
+            android:layout_height="75dp"
+            android:layout_marginTop="28dp"
+            android:autofillHints="@string/add_edit_label_sp_text"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/add_edit_deadline_dt"
+            tools:ignore="NotSibling,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/add_edit_description_til"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/add_edit_description_etn_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:gravity="start"
+                android:hint="@string/add_edit_description_et"
+                android:nextFocusDown="@id/login_btn"
+                android:nextFocusForward="@id/login_btn"
+                android:textColorHint="#546E7A"
+                app:endIconMode="clear_text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/add_edit_clear_btn_id"
+                style="@style/Widget.Material3.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center|center_vertical"
+                android:minHeight="48dp"
+                android:onClick="onClear"
+                android:text="@string/add_edit_clear_btn_id" />
+
+            <Button
+                android:id="@+id/add_edit_save_btn_id"
+                style="@style/Widget.Material3.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:onClick="upsertTask"
+                android:text="@string/add_edit_save_btn_id" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/add_edit_back_btn"
+        style="@style/Widget.AppCompat.ImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#00FFFFFF"
+        android:contentDescription="@string/back_btn_text"
+        android:onClick="onBackBtnPressed"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.044"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_arrow_back_24"
+        app:tint="?android:attr/textColorPrimary"
+        tools:ignore="SpeakableTextPresentCheck" />
+</androidx.constraintlayout.widget.ConstraintLayout>

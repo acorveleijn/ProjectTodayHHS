@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:foregroundTint="@color/design_default_color_on_primary"
+    tools:context=".activities.TaskListActivity">
+
+    <TextView
+        android:id="@+id/task_list_title_tv_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/task_list_title_tv_text"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.1" />
+
+    <ImageButton
+        android:id="@+id/task_list_logout_btn_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#00FFFFFF"
+        android:contentDescription="@string/add_name_btn_description"
+        android:minHeight="48dp"
+        android:onClick="onLogoutBtnPressed"
+        android:theme="@android:style/Widget.Material.ImageButton"
+        app:layout_constraintBottom_toBottomOf="@+id/task_list_title_tv_id"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/task_list_title_tv_id"
+        app:srcCompat="@drawable/ic_logout_24"
+        app:tint="?android:attr/textColorPrimary"
+        tools:ignore="ImageContrastCheck" />
+
+    <com.google.android.material.button.MaterialButtonToggleGroup
+        android:id="@+id/toggle_button_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        app:checkedButton="@id/task_list_todo_mb_id"
+        app:layout_constraintBottom_toBottomOf="@+id/task_list_sort_btn_id"
+        app:layout_constraintStart_toStartOf="@+id/task_list_title_tv_id"
+        app:layout_constraintTop_toBottomOf="@+id/task_list_title_tv_id"
+        app:layout_constraintVertical_bias="0.0"
+        app:selectionRequired="true"
+        app:singleSelection="true">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/task_list_todo_mb_id"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:checkable="false"
+            android:onClick="onToDoBtnPressed"
+            android:text="@string/task_list_todo_mb_text" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/task_list_done_mb_id"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onDoneBtnPressed"
+            android:text="@string/task_list_done_mb_text" />
+
+    </com.google.android.material.button.MaterialButtonToggleGroup>
+
+    <ImageButton
+        android:id="@+id/task_list_filter_btn_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#00FFFFFF"
+        android:contentDescription="@string/task_list_filter_btn_description"
+        android:minHeight="48dp"
+        android:onClick="onFilterBtnPressed"
+        app:layout_constraintBottom_toBottomOf="@+id/toggle_button_group"
+        app:layout_constraintEnd_toEndOf="@+id/task_list_logout_btn_id"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/task_list_logout_btn_id"
+        app:layout_constraintTop_toTopOf="@+id/toggle_button_group"
+        app:srcCompat="@drawable/ic_baseline_filter_list_24"
+        app:tint="?android:attr/textColorPrimary" />
+
+    <ImageButton
+        android:id="@+id/task_list_sort_btn_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="#00FFFFFF"
+        android:contentDescription="@string/task_list_sort_btn_description"
+        android:minHeight="48dp"
+        android:onClick="onSortBtnPressed"
+        app:layout_constraintBottom_toBottomOf="@+id/task_list_filter_btn_id"
+        app:layout_constraintEnd_toStartOf="@+id/task_list_filter_btn_id"
+        app:layout_constraintTop_toTopOf="@+id/task_list_filter_btn_id"
+        app:srcCompat="@drawable/ic_baseline_sort_24"
+        app:tint="?android:attr/textColorPrimary" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/task_list_add_btn_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:contentDescription="@string/task_list_add_btn_description"
+        android:focusable="true"
+        android:onClick="onAddBtnPressed"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/task_list_logout_btn_id"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/task_list_filter_btn_id"
+        app:layout_constraintVertical_bias="0.9"
+        app:srcCompat="@drawable/ic_baseline_add_24"
+        tools:ignore="ImageContrastCheck" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/task_list_rv_id"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toggle_button_group"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageButton
+        android:id="@+id/task_list_label_btn_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="#00FFFFFF"
+        android:contentDescription="@string/task_list_label_btn_description"
+        android:minHeight="48dp"
+        android:onClick="onLabelBtnPressed"
+        app:layout_constraintBottom_toBottomOf="@+id/task_list_logout_btn_id"
+        app:layout_constraintEnd_toEndOf="@+id/task_list_sort_btn_id"
+        app:layout_constraintEnd_toStartOf="@+id/task_list_logout_btn_id"
+        app:layout_constraintStart_toStartOf="@+id/task_list_sort_btn_id"
+        app:layout_constraintTop_toTopOf="@+id/task_list_logout_btn_id"
+        app:srcCompat="@drawable/ic_baseline_label_24"
+        app:tint="?android:attr/textColorPrimary" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="action_settings">Instellingen</string>
+    <string name="next">Volgende</string>
+    <string name="previous">Vorige</string>
+    <string name="add_name_btn_text">Naam</string>
+    <string name="add_name_btn_description">Uitloggen</string>
+    <string name="task_list_title_tv_text">%s\'s taken</string>
+    <string name="task_list_todo_mb_text">Te doen</string>
+    <string name="task_list_done_mb_text">Klaar</string>
+    <string name="task_list_filter_btn_description">Filter taken</string>
+    <string name="task_list_sort_btn_description">Sorteer taken</string>
+    <string name="task_list_add_btn_description">Voeg taak toe</string>
+    <string name="task_list_logout_btn_title_text">Weet je zeker dat je wilt stoppen?</string>
+    <string name="alert_confirm_text">JA</string>
+    <string name="alert_cancel_text">NEE</string>
+    <string name="popup_sort_title_text">Sorteer bij deadline</string>
+    <string name="popup_sort_descending_text">Aflopend</string>
+    <string name="popup_sort_ascending_text">Oplopend</string>
+
+    <!-- Labels -->
+    <string name="labels_title">Labels</string>
+    <string name="label_delete_dialog_contents">Weet je zeker dat je dit label wil wissen?\n\nHet wissen van dit label wist geen items die het gebruiken, maar haalt het label wel weg bij deze items.</string>
+    <string name="label_edit_dialog_new_title_hint">Nieuwe titel</string>
+    <string name="delete_label_text">Wis label</string>
+    <string name="label_edit_dialog_save_btn">Opslaan</string>
+    <string name="label_create_dialog_title">Nieuwe label</string>
+    <string name="label_create_dialog_title_hint">Titel</string>
+    <string name="cancel_btn_text">Annuleer</string>
+    <string name="label_create_dialog_create_btn">Voeg toe</string>
+    <string name="task_adapter_due_tv_text">Klaar voor:</string>
+    <string name="task_adapter_completed_tv_text">Klaar:</string>
+    <string name="popup_sort_default_text">Standaard</string>
+    <string name="popup_filter_title_text">Filter bij label</string>
+    <string name="popup_filter_all_text">Allemaal</string>
+    <string name="add_edit_title_pt">Voeg taak toe</string>
+    <string name="edit_name_ti_text">Naam</string>
+    <string name="add_edit_description_ti_text">Omschrijving</string>
+    <string name="add_edit_save_btn_id">Opslaan</string>
+    <string name="back_btn_text">Terug</string>
+    <string name="add_edit_clear_btn_id">Opschonen</string>
+    <string name="view_name_task_tv">Naam taak</string>
+    <string name="view_description_tv">Omschrijving</string>
+    <string name="view_completed_tv">Klaar</string>
+    <string name="add_edit_description_et">Omschrijving</string>
+    <string name="view_edit_btn_id">Bewerk</string>
+    <string name="edit_name_lbl_tv">Naam:</string>
+    <string name="edit_description_lbl_tv">Omschrijving</string>
+    <string name="view_view_task_tv">Bekijk taak</string>
+    <string name="view_in_progress_text">Bezig</string>
+    <string name="no_label_text">Geen label</string>
+    <string name="no_deadline_text">Geen deadline</string>
+    <string name="no_description_text">Geen omschrijving</string>
+    <string name="first_fragment_label">1e fragment</string>
+    <string name="second_fragment_label">2e fragment</string>
+    <string name="edit_edit_title_pt">Bewerk taak</string>
+    <string name="task_delete_message_text">Weet zeker dat je deze taak wilt verwijderen? \n\nDit kan niet ongedaan gemaakt worden.</string>
+    <string name="task_delete_title_text">Taak verwijderen</string>
+
+    <!-- Register -->
+    <string name="register_title">Registreren</string>
+    <string name="register_name_et_hint">Je naam</string>
+    <string name="register_retype_password_et_hint">Wachtwoord (controle)</string>
+    <string name="register_login_instead_tv_text">Ga naar Log in</string>
+    <string name="register_register_btn_title">Registreren</string>
+    <string name="register_registered_toast">Account aangemaakt, je wordt automatisch ingelogd</string>
+    <string name="register_validation_username_in_use">Gebruikersnaam al in gebruik</string>
+    <string name="register_validation_username_cannot_contain_whitespace">Gebruikersnaam mag geen witruimte bevatten</string>
+    <string name="register_validation_passwords_not_equal">Wachtwoorden zijn niet gelijk</string>
+    <string name="register_validation_password_too_short">Wachtwoord te kort</string>
+    <string name="register_validation_password_too_simple">Wachtwoord mag niet uit allemaal dezelfde karakters bestaan</string>
+    <string name="register_validation_password_is_known_string">Wachtwoord te gemakkelijk te raden</string>
+
+    <!-- Login -->
+    <string name="login_title">Log in</string>
+    <string name="login_register_instead_tv_text">Ga naar Registreren</string>
+    <string name="login_login_btn_title">Log in</string>
+    <string name="login_validation_invalid_credentials">Ongeldige logingegevens</string>
+    <string name="login_logged_in_toast">Ingelogd als %s</string>
+
+    <!-- Register/Login -->
+    <string name="username_et_hint">Gebruikersnaam</string>
+    <string name="password_et_hint">Wachtwoord</string>
+    <string name="validation_field_empty">Veld mag niet leeg zijn</string>
+    <string name="toast_error_text">Controleer alle velden a.u.b.</string>
+    <string name="edit_completed_lbl_tv">Klaar:</string>
+    <string name="add_edit_deadline_dt">Deadline (yyyy-mm-dd hh:mm) of leeg</string>
+
+    <!-- Date/Time edit dialog -->
+    <string name="date_edit_dialog_title">Wijzig datum of tijd</string>
+    <string name="date_edit_dialog_clear_btn">Maak leeg</string>
+    <string name="date_edit_dialog_ok_btn">OK</string>
+    <string name="label_error_empty_text">Leeg niet toegestaan!</string>
+    <string name="label_error_spaces_text">Beginnen of eindigen met witruimte niet toegestaan</string>
+    <string name="label_error_unique_text">Label moet uniek zijn</string>
+</resources>
